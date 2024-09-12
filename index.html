@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Automatic scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jianan's Demo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="rev.ico" type="image/x-icon">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Jianan's Demo</h1>
+    </header>
+
+    <!-- Menu -->
+    <nav>
+        <menu>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </menu>
+    </nav>
+
+    <div class="container">
+        <!-- Hyperlink -->
+        <p>Welcome to my website where I share something.</p>
+        <p>You try to find out false information.</p>
+
+        <!-- Table -->
+        <h2>My Skills</h2>
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>Hearthstone</td>
+                <td>Ranked 17th in 2021 NA</td>
+            </tr>
+            <tr>
+                <td>Technical support</td>
+                <td>Worked in Volkswagen, Dell and Microsoft</td>
+            </tr>
+        </table>
+
+        <!-- Images -->
+        <h2 id="gallery">Gallery (A start map for Civilization VI)</h2>
+        <img src="left.jpg" alt="Project Image 1">
+        <img src="right.jpg" alt="Project Image 2">
+
+        <!-- Audio -->
+        <h2>Audio (Just used as BGM)</h2>
+        <audio controls autoplay>
+            <source src="Secret_of_Immortality.mp3" type="audio/mp3">
+            Your browser does not support the audio tag or autoplay element.
+        </audio>
+
+        <!-- Video -->
+        <h2 id="projects">Project Overview (Not a real project intro)</h2>
+        <video controls width="400">
+            <source src="demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Button -->
+        <h2>More Projects (Just a few public repositories)</h2>
+        <button onclick="window.location.href='https://github.com/PickledBeef'">Visit My GitHub</button>
+
+        <!-- Contact Information (tel, mailto) -->
+        <h2 id="contact">Get in Touch</h2>
+        <p>Phone: <a href="tel:+12345678910">+1(234)567-8910</a></p>
+        <p>Email: <a href="mailto:ni.jian@noirtheastern.edu">ni.jian@noirtheastern.edu</a></p>
+
+        <!-- Summary -->
+        <h2>About me</h2>
+        <details>
+            <summary id="makabaka" onclick="changeSummaryContentMaka()">Click to read more</summary>
+            <p>I got my Bacholer's degree in NEU. Then, I did some simple work in different organizations for about two year.</p>
+            <p>Challenging issues for work are usually not technical issues.</p>
+        </details>
+
+
+        <h2>Verify your answer</h2>
+        <details>
+            <summary id="fakenews" onclick="changeSummaryContentFake()">From your view, how many pieces of false information in this page?</summary>
+            <p>All other should be true.</p>
+        </details>
+
+        <!-- Form -->
+        <h2>Any suggestion?</h2>
+        <form action="mailto:ni.jian@noirtheastern.edu" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Sep Assignment 01 | Designed by Jianan</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        // Function to change summary content after it's clicked
+        function changeSummaryContentMaka() {
+            var summaryElement = document.getElementById("makabaka");
+            if (summaryElement.innerText === "Click to read more") {
+                summaryElement.innerText = "Thanks for your interest.";
+            } else {
+                summaryElement.innerText = "Click to read more";
+            }
+        }
+        function changeSummaryContentFake() {
+            var summaryElement = document.getElementById("fakenews");
+            if (summaryElement.innerText === "From your view, how many pieces of false information in this page?") {
+                summaryElement.innerHTML = "If I'm right, there are <b>three</b>.";
+            } else {
+                summaryElement.innerText = "\n1) My Bachelor's degree was not achieved in NEU. " +
+                    "\n2) The map is for Europa Universalis IV." +
+                    "\n3) Phone number.";
+            }
+        }
+    </script>
+</body>
+</html>

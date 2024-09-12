@@ -1,0 +1,83 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+form {
+    margin: 20px 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+h2 {
+    margin-top: 8%;
+    margin-bottom: 3%;
+}
+details p {
+    margin-left: 5%;
+}
+/*nav tag controls*/
+nav {
+    background-color: #333;
+}
+nav menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+    background-color: #333;
+}
+nav menu li {
+    display: inline;
+    margin: 0 10px;
+}
+nav menu li a {
+    color: white;
+    padding: 0 10px;
+    font-size: 20px;
+    margin: 1%;
+}
+/*a tag controls*/
+a,
+a:visited {
+    text-decoration: none;
+}
+a[href^="mailto:"], a[href^="mailto:"]:visited, a[href^="tel:"], a[href^="tel:"]:visited {
+    color: #000000;
+}
+a:hover {
+    color: #4CAF50;
+    font-weight: bold;
+}
